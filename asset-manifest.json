@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/client-notification/static/css/main.4c48667a.chunk.css",
+    "main.js": "/client-notification/static/js/main.33ed40b6.chunk.js",
+    "main.js.map": "/client-notification/static/js/main.33ed40b6.chunk.js.map",
+    "runtime-main.js": "/client-notification/static/js/runtime-main.4042437d.js",
+    "runtime-main.js.map": "/client-notification/static/js/runtime-main.4042437d.js.map",
+    "static/css/2.e10332d9.chunk.css": "/client-notification/static/css/2.e10332d9.chunk.css",
+    "static/js/2.0253083c.chunk.js": "/client-notification/static/js/2.0253083c.chunk.js",
+    "static/js/2.0253083c.chunk.js.map": "/client-notification/static/js/2.0253083c.chunk.js.map",
+    "index.html": "/client-notification/index.html",
+    "precache-manifest.d65b3758b5ee247841b536087c6eca47.js": "/client-notification/precache-manifest.d65b3758b5ee247841b536087c6eca47.js",
+    "service-worker.js": "/client-notification/service-worker.js",
+    "static/css/2.e10332d9.chunk.css.map": "/client-notification/static/css/2.e10332d9.chunk.css.map",
+    "static/css/main.4c48667a.chunk.css.map": "/client-notification/static/css/main.4c48667a.chunk.css.map",
+    "static/js/2.0253083c.chunk.js.LICENSE.txt": "/client-notification/static/js/2.0253083c.chunk.js.LICENSE.txt",
+    "static/media/unilogo.png": "/client-notification/static/media/unilogo.7dfff396.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4042437d.js",
+    "static/css/2.e10332d9.chunk.css",
+    "static/js/2.0253083c.chunk.js",
+    "static/css/main.4c48667a.chunk.css",
+    "static/js/main.33ed40b6.chunk.js"
+  ]
+}
