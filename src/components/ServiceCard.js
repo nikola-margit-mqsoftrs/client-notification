@@ -13,7 +13,14 @@ import ServiceCardButton from './ServiceCardButton'
 
 const { Meta } = Card
 
-export default function ServiceCard({ name, description, status, showDrawer }) {
+export default function ServiceCard({
+  name,
+  description,
+  status,
+  showDrawer,
+  startService,
+  stopService,
+}) {
   const color =
     status === 'success'
       ? '#00C851'
@@ -32,10 +39,14 @@ export default function ServiceCard({ name, description, status, showDrawer }) {
     <Card
       css={{ width: 300, margin: 'auto' }}
       actions={[
-        <ServiceCardButton title='Start service'>
+        <ServiceCardButton
+          title='Start service'
+          onClick={() => startService(name)}>
           <PlayCircleOutlined key='setting' />
         </ServiceCardButton>,
-        <ServiceCardButton title='Stop service'>
+        <ServiceCardButton
+          title='Stop service'
+          onClick={() => stopService(name)}>
           <PauseCircleOutlined key='edit' />
         </ServiceCardButton>,
         <ServiceCardButton title='Service log' onClick={showDrawer}>
