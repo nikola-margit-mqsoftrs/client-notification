@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React from 'react'
-import { jsx } from "@emotion/core";
+import { jsx } from '@emotion/core'
 import {
   PlayCircleOutlined,
   PauseCircleOutlined,
@@ -10,6 +9,7 @@ import {
   QuestionCircleOutlined,
 } from '@ant-design/icons'
 import { Card } from 'antd'
+import ServiceCardButton from './ServiceCardButton'
 
 const { Meta } = Card
 
@@ -32,26 +32,20 @@ export default function ServiceCard({ name, description, status, showDrawer }) {
     <Card
       css={{ width: 300, margin: 'auto' }}
       actions={[
-        <React.Fragment>
+        <ServiceCardButton title='Start service'>
           <PlayCircleOutlined key='setting' />
-          Start service
-        </React.Fragment>,
-        <React.Fragment>
+        </ServiceCardButton>,
+        <ServiceCardButton title='Stop service'>
           <PauseCircleOutlined key='edit' />
-          Stop service
-        </React.Fragment>,
-        <div onClick={showDrawer}>
+        </ServiceCardButton>,
+        <ServiceCardButton title='Service log' onClick={showDrawer}>
           <UnorderedListOutlined key='edit' />
-          <br />
-          Service Log
-        </div>,
+        </ServiceCardButton>,
       ]}
       bodyStyle={{ backgroundColor: color }}>
       <Meta
         avatar={
-          <Icon
-            css={{ color: '#fff', fontSize: '1.6rem', opacity: '0.95' }}
-          />
+          <Icon css={{ color: '#fff', fontSize: '1.6rem', opacity: '0.95' }} />
         }
         title={name}
         description={description}
