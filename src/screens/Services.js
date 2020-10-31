@@ -1,5 +1,7 @@
+/** @jsx jsx */
 import React, { useState } from 'react'
 import { Drawer, Alert } from 'antd'
+import { jsx } from "@emotion/core";
 import ServiceCard from '../components/ServiceCard'
 
 export default function Services() {
@@ -11,9 +13,9 @@ export default function Services() {
     setVisible(false)
   }
   return (
-    <>
+    <React.Fragment>
       <div
-        style={{
+        css={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 1fr',
           gridGap: '26px 0px',
@@ -34,7 +36,7 @@ export default function Services() {
         placement='right'
         onClose={onClose}
         visible={visible}>
-        <div style={{ display: 'grid', gridGap: '20px' }}>
+        <div css={{ display: 'grid', gridGap: '20px' }}>
           <Alert
             message='Started 11m ago bd6de8fe-0c8a-11eb-adc1-0242ac120002'
             type='success'
@@ -62,7 +64,7 @@ export default function Services() {
           />
         </div>
       </Drawer>
-    </>
+    </React.Fragment>
   )
 }
 
