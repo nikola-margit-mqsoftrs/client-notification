@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { useState } from 'react'
-import { Drawer, Alert } from 'antd'
-import { jsx } from "@emotion/core";
+import { Drawer, Alert, message } from 'antd'
+import { jsx } from '@emotion/core'
 import ServiceCard from '../components/ServiceCard'
 
 export default function Services() {
@@ -11,6 +11,12 @@ export default function Services() {
   }
   const onClose = () => {
     setVisible(false)
+  }
+  const startService = (name) => {
+    message.success(`Service ${name} started!`)
+  }
+  const stopService = (name) => {
+    message.warning(`Service ${name} stoped!`)
   }
   return (
     <React.Fragment>
@@ -26,6 +32,8 @@ export default function Services() {
             details={details}
             status={status}
             showDrawer={showDrawer}
+            startService={startService}
+            stopService={stopService}
             key={name}
           />
         ))}
