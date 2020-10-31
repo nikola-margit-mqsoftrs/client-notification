@@ -1,5 +1,7 @@
+/** @jsx jsx */
 import React from 'react'
 import { Layout } from 'antd'
+import { jsx } from "@emotion/core";
 import logoImage from './assets/unilogo.png'
 import Services from './screens/Services'
 
@@ -7,24 +9,24 @@ const { Header, Content, Footer } = Layout
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <Layout>
-        <Header style={{ color: '#fff' }}>
-          <div style={{ float: 'left' }}>
-            <img src={logoImage} alt='Logo' style={{ width: '90px' }} />
+        <Header css={{ color: '#fff' }}>
+          <div css={{ float: 'left' }}>
+            <img src={logoImage} alt='Logo' css={{ width: '90px' }} />
           </div>
-          <h2 style={{ color: '#fff' }}>Client Notifications</h2>
+          <h2 css={{ color: '#fff' }}>Client Notifications</h2>
         </Header>
       </Layout>
       <Layout>
-        <Content style={{ padding: '35px', minHeight: '500px' }}>
+        <Content css={{ padding: '35px', minHeight: '500px' }}>
           <Services />
         </Content>
         <Footer>
-          <Footer style={{ textAlign: 'center' }}>MQ Soft ©2020</Footer>
+          <Footer css={{ textAlign: 'center' }}>MQ Soft ©2020</Footer>
         </Footer>
       </Layout>
-    </>
+    </React.Fragment>
   )
 }
 

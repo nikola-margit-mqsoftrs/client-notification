@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import React from 'react'
+import { jsx } from "@emotion/core";
 import {
   PlayCircleOutlined,
   PauseCircleOutlined,
@@ -28,16 +30,16 @@ export default function ServiceCard({ name, description, status, showDrawer }) {
 
   return (
     <Card
-      style={{ width: 300, margin: 'auto' }}
+      css={{ width: 300, margin: 'auto' }}
       actions={[
-        <>
+        <React.Fragment>
           <PlayCircleOutlined key='setting' />
           Start service
-        </>,
-        <>
+        </React.Fragment>,
+        <React.Fragment>
           <PauseCircleOutlined key='edit' />
           Stop service
-        </>,
+        </React.Fragment>,
         <div onClick={showDrawer}>
           <UnorderedListOutlined key='edit' />
           <br />
@@ -48,7 +50,7 @@ export default function ServiceCard({ name, description, status, showDrawer }) {
       <Meta
         avatar={
           <Icon
-            style={{ color: '#fff', fontSize: '1.6rem', opacity: '0.95' }}
+            css={{ color: '#fff', fontSize: '1.6rem', opacity: '0.95' }}
           />
         }
         title={name}
